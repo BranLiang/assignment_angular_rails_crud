@@ -35,6 +35,7 @@ source 'https://rails-assets.org' do
 end
 
 gem 'devise_token_auth'
+gem 'angular_rails_csrf'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
