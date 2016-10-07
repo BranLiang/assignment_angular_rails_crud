@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require lodash
+//= require ui-router
+//= require restangular
+//= require angular-cookie
+//= require ng-token-auth
 //= require_tree .
