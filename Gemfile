@@ -32,6 +32,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-restangular'
   gem 'rails-assets-angular-cookie'
   gem 'rails-assets-ng-token-auth'
+  gem 'rails-assets-angular-flash-alert'
 end
 
 gem 'devise_token_auth'
@@ -44,9 +45,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'faker'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem 'guard-rspec', require: false
+  # gem 'factory_girl_rails'
+  # gem 'rspec-rails'
+  # gem 'guard-rspec', require: false
 end
 
 group :development do

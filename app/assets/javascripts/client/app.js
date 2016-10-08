@@ -1,4 +1,4 @@
-var CrudApp = angular.module('CrudApp', ['ui.router', 'restangular', 'ng-token-auth']);
+var CrudApp = angular.module('CrudApp', ['ui.router', 'restangular', 'ng-token-auth', 'ngFlash']);
 
 CrudApp.config(function ($stateProvider, $urlRouterProvider, RestangularProvider, $authProvider) {
 	RestangularProvider.setBaseUrl('/api/v1');

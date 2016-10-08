@@ -18,4 +18,5 @@
 //= require restangular
 //= require angular-cookie
 //= require ng-token-auth
+//= require angular-flash-alert
 //= require_tree .
