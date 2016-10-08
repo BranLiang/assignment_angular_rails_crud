@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2 class="text-center">Pins Index</h2>
+    <div ng-repeat="pin in pins">
+      <h3 class="text-primary">{{ pin.item_name }}</h3>
+      <p>Owner: {{ pin.user.name }}</p>
+      <p ng-if="pin.buy_sell">Status: Buy</p>
+      <p ng-if="!pin.buy_sell">Status: Sell</p>
+      <p>{{ pin.description }}</p>
+    </div>
+  </div>
+</div>
