@@ -18,4 +18,9 @@ CrudApp.config(function ($stateProvider, $urlRouterProvider, RestangularProvider
 				$scope.pins = Restangular.all('pins').getList().$object;
 			}]
 		})
+		.state('login', {
+			url: '/login',
+			templateUrl: 'templates/auth/login.html',
+			controller: 'AuthCtrl'
+		})
 });
