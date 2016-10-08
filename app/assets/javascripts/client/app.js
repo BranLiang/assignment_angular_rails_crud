@@ -12,7 +12,7 @@ CrudApp.config(function ($stateProvider, $urlRouterProvider, RestangularProvider
 
 	$stateProvider
 		.state('pins', {
-			url: 'pins',
+			url: '/pins',
 			templateUrl: 'templates/pin/index.html',
 			controller: ['Restangular', '$scope', function (Restangular, $scope) {
 				$scope.pins = Restangular.all('pins').getList().$object;
