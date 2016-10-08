@@ -3,8 +3,6 @@ class PinsController < ApplicationController
     @pins = Pin.all
     respond_to do |format|
       format.json { render json: @pins.to_json(:include => :user), status: 200 }
-<<<<<<< HEAD
-=======
     end
   end
 
@@ -49,7 +47,6 @@ class PinsController < ApplicationController
       else
         format.json { render json: { :error => "Not found" }, status: 404 }
       end
->>>>>>> crud
     end
   end
 end
