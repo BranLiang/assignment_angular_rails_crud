@@ -29,6 +29,7 @@ class PinsController < ApplicationController
   end
 
   def create
+    binding.pry
     @pin = current_user.pins.build(white_list_params)
     respond_to do |format|
       if @pin.save
@@ -49,4 +50,9 @@ class PinsController < ApplicationController
       end
     end
   end
+
+  private
+    def white_list_params
+      params.require(:pin).permit(:item_name, :buy_sell, :description)
+    end
 end

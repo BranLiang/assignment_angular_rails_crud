@@ -1,5 +1,19 @@
 <div ng-app="CrudApp">
-  <flash-message></flash-message> 
+  <div ng-controller="NavCtrl">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="pins">Pins</a></li>
+          <li><a ui-sref="login" ng-hide="current_user">Login</a></li>
+          <li><a href="" ng-click="logout()" ng-show="current_user">Logout</a><li>
+          <li><p class="navbar-text" ng-show="current_user">Signed in as {{ current_user.name }}</p><li>
+          <li><a ui-sref="pins.new" ng-show="current_user">New Pin</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <flash-message></flash-message>
   <h1 class="text-center">Community Pin Board</h1>
   <div ui-view></div>
 </div>

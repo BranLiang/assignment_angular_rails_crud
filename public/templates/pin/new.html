@@ -1,0 +1,24 @@
+<h3 class="text-center">New Pin</h3>
+
+<div class="col-md-6 col-md-offset-3">
+  <form ng-init="pinPrams = {}">
+    <div class="form-group">
+      <label for="name">Item name:</label>
+      <input type="text" name="name" class="form-control" ng-model="pinParams.item_name">
+    </div>
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <select class="form-control" name="type" ng-model="pinParams.buy_sell">
+        <option value=true>Buy</option>
+        <option value=false>Sell</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea name="description" rows="8" class="form-control" ng-model="pinParams.description"></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" name="Create" ng-click="createPin(pinParams)" class="btn btn-lg btn-primary btn-block">
+    </div>
+  </form>
+</div>

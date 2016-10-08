@@ -14,13 +14,26 @@ CrudApp.config(function ($stateProvider, $urlRouterProvider, RestangularProvider
 		.state('pins', {
 			url: '/pins',
 			templateUrl: 'templates/pin/index.html',
-			controller: ['Restangular', '$scope', function (Restangular, $scope) {
-				$scope.pins = Restangular.all('pins').getList().$object;
+			controller: ['pinService', '$scope', function (pinService, $scope) {
+				$scope.pins = pinService.all();
+				$scope.$on('pin.created', function (event, pin) {
+					$scope.pins.unshift(pin);
+				})
 			}]
 		})
 		.state('login', {
 			url: '/login',
 			templateUrl: 'templates/auth/login.html',
 			controller: 'AuthCtrl'
+		})
+		.state('pins.new', {
+			url: '/new',
+			templateUrl: 'templates/pin/new.html',
+			controller: ['pinService', '$scope', function (pinService, $scope) {
+				$scope.createPin = function (params) {
+					pinService.new(params);
+					$scope.pinParams = {};
+				}
+			}]
 		})
 });

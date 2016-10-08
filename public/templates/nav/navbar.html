@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <a ui-sref="pins">Pins</a>
+      <a ui-sref="login" ng-hide="current_user">Login</a>
+      <p class="navbar-text" ng-if="current_user">Signed in as {{ current_user.name }}</p>
+      <a href="" ng-click="logout" ng-if="current_user">Logout</a>
+    </ul>
+  </div>
+</nav>
